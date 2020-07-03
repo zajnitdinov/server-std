@@ -20,8 +20,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/tasks', db.getTasks);
-app.get('/tasks/:id', db.getTaskById)
-app.post('/tasks', db.createTask)
+app.get('/usertasks/:id', db.getUserTasks);
+
+//app.post('/tasks', db.addTasks);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}`)
